@@ -1,0 +1,252 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+        <ImageView
+            android:id="@+id/logo1"
+            android:layout_marginStart="30dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"/>
+            <!--android:background="@drawable/logo_new_1"-->
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/logo1"
+            android:layout_marginTop="25dp"
+            android:textSize="35sp"
+            android:text="Restaurant"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="290dp"
+            android:background="@color/colorPrimaryDark">
+
+            <TextView
+                android:id="@+id/itemText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:textSize="18sp">
+
+            </TextView>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp">
+
+
+        <Button
+            android:background="@color/colorButton"
+            android:id="@+id/button_log_out"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="выйти"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.047"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loginText" />
+
+        <Button
+            android:id="@+id/button_acceptOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="364dp"
+            android:layout_marginEnd="12dp"
+            android:background="@color/colorButton"
+            android:text="персонал"
+            app:layout_constraintEnd_toStartOf="@+id/button_getOrders"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/loginText"
+            android:layout_width="168dp"
+            android:layout_height="62dp"
+            android:layout_marginTop="364dp"
+            android:text="Вы вошли как: Администратор"
+            android:textColor="#000"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.061"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/loginText2"
+            android:layout_width="30dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="2dp"
+            android:text="От:"
+            android:textColor="#000"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/button_getOrders5"
+            app:layout_constraintTop_toTopOf="@+id/button_getOrders5" />
+
+        <TextView
+            android:id="@+id/loginText3"
+            android:layout_width="30dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="8dp"
+            android:text="До:"
+            android:textColor="#000"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/button_getOrders3"
+            app:layout_constraintTop_toTopOf="@+id/button_getOrders3" />
+
+        <Button
+            android:id="@+id/button_getOrders"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="126dp"
+            android:layout_marginTop="364dp"
+            android:layout_marginEnd="15dp"
+            android:background="@color/colorButton"
+            android:text="Заказы"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/loginText"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button_getOrders9"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="296dp"
+            android:layout_marginEnd="15dp"
+            android:background="@color/colorButton"
+            android:text="выручка за период"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button_getOrders11"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="296dp"
+            android:layout_marginEnd="8dp"
+            android:background="@color/colorButton"
+            android:text="Проданные блюда"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/button_getOrders9"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button_allMoney"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="296dp"
+            android:layout_marginEnd="8dp"
+            android:background="@color/colorButton"
+            android:text="общая выручка"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/button_getOrders11"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button_averageSum"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="296dp"
+            android:background="@color/colorButton"
+            android:text="средняя стоимость заказа"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button_getOrders3"
+            android:layout_width="95dp"
+            android:layout_height="36dp"
+            android:text="-"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/colorButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_getOrders" />
+
+        <Button
+            android:id="@+id/button_getOrders5"
+            android:layout_width="95dp"
+            android:layout_height="36dp"
+            android:layout_centerHorizontal="true"
+            android:text="-"
+            android:layout_marginEnd="48dp"
+            android:background="@color/colorButton"
+            app:layout_constraintEnd_toStartOf="@+id/button_getOrders3"
+            app:layout_constraintTop_toTopOf="@+id/button_getOrders3" />
+
+        <Button
+            android:id="@+id/button_ordersByDate"
+            android:layout_width="97dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="12dp"
+            android:background="@color/colorButton"
+            android:text="проданные блюда за период"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/masters_management2" />
+
+        <Button
+            android:id="@+id/masters_management"
+            android:layout_width="130dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/colorButton"
+            android:text="Управление персоналом"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_log_out" />
+
+        <Button
+            android:id="@+id/masters_management2"
+            android:layout_width="140dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="156dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/colorButton"
+            android:text="Управление ассортиментом"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_log_out" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+</RelativeLayout>

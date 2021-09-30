@@ -1,0 +1,355 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+        <ImageView
+            android:id="@+id/logo1"
+            android:layout_marginStart="30dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/logo1"
+            android:layout_marginTop="25dp"
+            android:textSize="35sp"
+            android:text="@string/app_name"
+            />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:background="@color/colorPrimaryDark"
+            android:layout_height="250dp">
+
+
+            <TextView
+                android:id="@+id/itemText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000">
+            </TextView>
+        </androidx.core.widget.NestedScrollView>
+
+
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp">
+
+
+        <EditText
+            android:id="@+id/date_birth"
+            android:inputType="date"
+            android:layout_width="126dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@android:color/black"
+            android:hint="24.04.20"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/salary">
+
+        </EditText>
+
+        <EditText
+            android:id="@+id/pass"
+            android:layout_width="126dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="17dp"
+            android:backgroundTint="@android:color/black"
+            android:hint="******"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/login">
+        </EditText>
+
+        <EditText
+            android:id="@+id/login"
+            android:layout_width="126dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="17dp"
+            android:backgroundTint="@android:color/black"
+            android:hint="example"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/date_birth">
+        </EditText>
+
+        <TextView
+            android:id="@+id/textViewName7"
+            android:layout_width="52dp"
+            android:layout_height="29dp"
+            android:layout_marginEnd="2dp"
+            android:text="Пароль:"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/pass"
+            app:layout_constraintTop_toTopOf="@+id/pass" />
+
+        <TextView
+            android:id="@+id/textViewName8"
+            android:layout_width="52dp"
+            android:layout_height="29dp"
+            android:text="Логин:"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/login"
+            app:layout_constraintTop_toTopOf="@+id/login" />
+
+        <TextView
+            android:id="@+id/textViewName10"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="256dp"
+            android:layout_marginEnd="3dp"
+            android:text="Зарплата:"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/salary"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/salary"
+            android:layout_width="126dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="256dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@android:color/black"
+            android:hint="200000"
+            android:inputType="number"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></EditText>
+
+        <TextView
+            android:id="@+id/textViewName9"
+            android:layout_width="wrap_content"
+            android:layout_height="29dp"
+            android:layout_marginEnd="1dp"
+            android:text="Дата \nрождения:"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/date_birth"
+            app:layout_constraintTop_toTopOf="@+id/date_birth" />
+
+        <TextView
+            android:id="@+id/textMasterID"
+            android:layout_width="48dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="4dp"
+            android:text="ID:"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/masterID"
+            app:layout_constraintTop_toBottomOf="@+id/textViewName7" />
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="126dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="256dp"
+            android:backgroundTint="@android:color/black"
+            android:hint="Ivan"
+            android:inputType="textPersonName"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/textViewName3"
+            app:layout_constraintTop_toTopOf="parent"></EditText>
+
+        <EditText
+            android:id="@+id/role"
+            android:layout_width="126dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/black"
+            android:hint="Worker"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/textViewName"
+            app:layout_constraintTop_toTopOf="@+id/textViewName"></EditText>
+
+        <EditText
+            android:id="@+id/phone"
+            android:layout_width="126dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:backgroundTint="@android:color/black"
+            android:hint="89632221455"
+            android:inputType="phone"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/textViewName5"
+            app:layout_constraintTop_toTopOf="@+id/textViewName5">
+
+        </EditText>
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="126dp"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:layout_marginStart="2dp"
+            android:backgroundTint="@android:color/black"
+            android:hint="example@email.ru"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/textViewName6"
+            app:layout_constraintTop_toTopOf="@+id/textViewName6">
+
+        </EditText>
+
+        <EditText
+            android:id="@+id/masterID"
+            android:layout_width="126dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@android:color/black"
+            android:inputType="number"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pass">
+        </EditText>
+
+        <Button
+            android:id="@+id/button_getMasters"
+            android:layout_width="85dp"
+            android:layout_height="45dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="Список"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/email" />
+
+        <Button
+            android:id="@+id/button_getMasters2"
+            android:layout_width="85dp"
+            android:layout_height="45dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="логин пароль"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/button_getMasters"
+            app:layout_constraintTop_toBottomOf="@+id/email" />
+
+        <Button
+            android:id="@+id/deleteMaster"
+            android:layout_width="85dp"
+            android:layout_height="45dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="16dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="Уволить"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/addMaster"
+            app:layout_constraintTop_toTopOf="@+id/addMaster" />
+
+        <Button
+            android:id="@+id/showAvg"
+            android:layout_width="85dp"
+            android:layout_height="45dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="16dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="Изменить данные"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/deleteMaster"
+            app:layout_constraintTop_toTopOf="@+id/addMaster" />
+
+        <Button
+            android:id="@+id/addMaster"
+            android:layout_width="85dp"
+            android:layout_height="45dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="Добавить"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_getMasters" />
+
+        <TextView
+            android:id="@+id/textViewName3"
+            android:layout_width="52dp"
+            android:layout_height="29dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="256dp"
+            android:text="Имя:"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewName"
+            android:layout_width="52dp"
+            android:layout_height="29dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="17dp"
+            android:text="Роль:"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewName3" />
+
+        <TextView
+            android:id="@+id/textViewName5"
+            android:layout_width="52dp"
+            android:layout_height="29dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="Телефон:"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewName" />
+
+        <TextView
+            android:id="@+id/textViewName6"
+            android:layout_width="52dp"
+            android:layout_height="29dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="Почта"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewName5" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</RelativeLayout>

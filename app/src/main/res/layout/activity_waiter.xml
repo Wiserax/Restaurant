@@ -1,0 +1,245 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+        <ImageView
+            android:id="@+id/logo1"
+            android:layout_marginStart="30dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/logo1"
+            android:layout_marginTop="25dp"
+            android:textSize="35sp"
+            android:text="@string/app_name"
+            />
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:background="@color/colorPrimaryDark">
+
+            <TextView
+                android:id="@+id/itemText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"></TextView>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp">
+
+
+        <Button
+            android:background="@color/colorPrimaryDark"
+            android:id="@+id/button_log_out"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="выйти"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.049"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loginText" />
+
+        <Button
+            android:id="@+id/button_acceptOrder"
+            android:layout_width="130dp"
+            android:layout_height="53dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="заказы по официанту"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_acceptOrder2" />
+
+        <Button
+            android:id="@+id/button_acceptOrder2"
+            android:layout_width="130dp"
+            android:layout_height="53dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="Заказы \nпо столу"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_getOrders" />
+
+        <TextView
+            android:id="@+id/loginText"
+            android:layout_width="132dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="316dp"
+            android:text="Вы вошли как: Официант"
+            android:textColor="#000"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.057"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tablesText"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="7dp"
+            android:text="Количество столов: 30"
+            android:textColor="#000"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/loginText"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/button_getOrders"
+            android:layout_width="130dp"
+            android:layout_height="45dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="316dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="узнать администратора"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button_getOrders8"
+            android:layout_width="130dp"
+            android:layout_height="45dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="316dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="узнать администратора"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button_getOrders7"
+            android:layout_width="80dp"
+            android:layout_height="45dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginEnd="10dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="Меню"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@+id/button_getOrders"
+            app:layout_constraintTop_toTopOf="@+id/button_getOrders" />
+
+        <Button
+            android:id="@+id/button_getOrders10"
+            android:layout_width="130dp"
+            android:layout_height="45dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="Официанты"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/button_getOrders"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/button_goodOrder"
+            android:layout_width="130dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="Принять заказ"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_acceptOrder" />
+
+        <EditText
+            android:id="@+id/id_part"
+            android:layout_width="147dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@android:color/black"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinner" />
+
+        <EditText
+            android:id="@+id/id_part2"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:backgroundTint="@android:color/black"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toStartOf="@+id/button_acceptOrder2"
+            app:layout_constraintTop_toTopOf="@+id/button_acceptOrder2" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="146dp"
+            android:layout_height="27dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="@android:color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_log_out" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="44dp"
+            android:layout_height="39dp"
+            android:text="кол-во шт."
+            android:textColor="#000000"
+            app:layout_constraintStart_toEndOf="@+id/id_part"
+            app:layout_constraintTop_toTopOf="@+id/id_part" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="56dp"
+            android:layout_height="38dp"
+            android:layout_marginEnd="8dp"
+            android:text="ID:"
+            android:textSize="19sp"
+            android:textColor="#000000"
+            app:layout_constraintEnd_toStartOf="@+id/id_part2"
+            app:layout_constraintTop_toTopOf="@+id/id_part2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+</RelativeLayout>

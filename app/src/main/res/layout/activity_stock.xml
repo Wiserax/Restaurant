@@ -1,0 +1,344 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+        <ImageView
+            android:id="@+id/logo1"
+            android:layout_marginStart="30dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/logo1"
+            android:layout_marginTop="25dp"
+            android:textSize="35sp"
+            android:text="@string/app_name"
+            />
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:background="@color/colorPrimaryDark">
+
+
+            <TextView
+                android:id="@+id/itemText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"></TextView>
+        </androidx.core.widget.NestedScrollView>
+
+
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp">
+
+
+        <EditText
+            android:id="@+id/masterID"
+            android:layout_width="65dp"
+            android:layout_height="38dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@android:color/black"
+            android:inputType="number"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/masterID2">
+
+        </EditText>
+
+        <EditText
+            android:id="@+id/masterID2"
+            android:layout_width="65dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="254dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@android:color/black"
+            android:inputType="number"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </EditText>
+
+        <TextView
+            android:id="@+id/textMasterID2"
+            android:layout_width="60dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:text="ID блюда:"
+            android:textAlignment="textStart"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/masterID"
+            app:layout_constraintTop_toTopOf="@+id/masterID" />
+
+        <TextView
+            android:id="@+id/textMasterID3"
+            android:layout_width="60dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="4dp"
+            android:text="ID:\nпродукта"
+            android:textAlignment="textStart"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/masterID2"
+            app:layout_constraintTop_toTopOf="@+id/masterID2" />
+
+        <TextView
+            android:id="@+id/text_def"
+            android:layout_width="wrap_content"
+            android:layout_height="26dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="4dp"
+            android:text="Кол-во:"
+            android:textAlignment="textStart"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@+id/date_birth2"
+            app:layout_constraintTop_toTopOf="@+id/textViewName3" />
+
+        <EditText
+            android:id="@+id/date_birth"
+            android:layout_width="67dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@android:color/black"
+            android:hint="200"
+            android:inputType="number"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textViewName10">
+
+        </EditText>
+
+        <EditText
+            android:id="@+id/date_birth2"
+            android:layout_width="67dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@android:color/black"
+            android:hint="30"
+            android:inputType="number"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textViewName3">
+
+        </EditText>
+
+        <TextView
+            android:id="@+id/textViewName10"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="336dp"
+            android:text="Блюдо:"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/salary"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="3dp"
+            android:backgroundTint="@android:color/black"
+            android:hint="Шаверма"
+            android:inputType="textPersonName"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/textViewName10"
+            app:layout_constraintTop_toTopOf="@+id/textViewName10">
+
+        </EditText>
+
+        <TextView
+            android:id="@+id/textViewName9"
+            android:layout_width="wrap_content"
+            android:layout_height="29dp"
+            android:layout_marginEnd="4dp"
+            android:text="Цена:"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/date_birth"
+            app:layout_constraintTop_toTopOf="@+id/textViewName10" />
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:backgroundTint="@android:color/black"
+            android:hint="Мясо курицы"
+            android:inputType="textPersonName"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/textViewName3"
+            app:layout_constraintTop_toTopOf="@+id/textViewName3">
+
+        </EditText>
+
+        <Button
+            android:id="@+id/button_getMasters"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="Список блюд"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewName3" />
+
+        <Button
+            android:id="@+id/button_getMasters4"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="288dp"
+            android:layout_marginEnd="17dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="добавить в состав"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/textMasterID2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button_getMasters5"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginEnd="8dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="убрать из состава"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/button_getMasters4"
+            app:layout_constraintTop_toTopOf="@+id/button_getMasters4" />
+
+        <Button
+            android:id="@+id/button_getMasters3"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="8dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="закупить продукты"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/button_getMasters"
+            app:layout_constraintTop_toTopOf="@+id/button_getMasters" />
+
+        <Button
+            android:id="@+id/deleteMaster"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginEnd="16dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="Удалить"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/addMaster" />
+
+        <Button
+            android:id="@+id/deleteMaster2"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginEnd="16dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="Изменить"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/popular_beer" />
+
+        <Button
+            android:id="@+id/addMaster"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="Добавить блюдо"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_getMasters" />
+
+        <Button
+            android:id="@+id/addMaster2"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="Добавить продукт"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/addMaster"
+            app:layout_constraintTop_toBottomOf="@+id/button_getMasters" />
+
+        <TextView
+            android:id="@+id/textViewName3"
+            android:layout_width="88dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Ингридиент:"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewName10" />
+
+        <Button
+            android:id="@+id/popular_beer"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="Продукты на складе"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/button_getMasters3"
+            app:layout_constraintTop_toTopOf="@+id/button_getMasters" />
+
+        <Button
+            android:id="@+id/showYearAmount"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="Ингредиенты в блюде"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/addMaster2"
+            app:layout_constraintTop_toTopOf="@+id/addMaster" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</RelativeLayout>
